@@ -10,7 +10,10 @@ then
   fi
 fi
 
-sed -i '' "s/.ENV_NOW./$ENV_NOW/g" ./src/api.js
+# mac 下
+# sed -i '' "s/.ENV_NOW./$ENV_NOW/g" ./src/api.js
+# 其他linux下
+sed -i "s/.ENV_NOW./$ENV_NOW/g" ./src/api.js
 
 npm i
 npm run build
